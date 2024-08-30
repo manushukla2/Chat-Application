@@ -5,7 +5,9 @@ import messageRoutes from './routes/message.routes.js';
 import userRoutes from './routes/user.routes.js';
 import connectToMongoDB from './db/connectToMongoDB.js';
 import cookieParser from 'cookie-parser';
-const app=express();
+import { app, server } from './socket/socket.js';
+
+
 
 const PORT= process.env.PORT || 5000;
 dotenv.config();
@@ -20,7 +22,25 @@ app.get("/",(req,res)=>{
 })
 
 
-app.listen(PORT,()=>{
+app.get("/update",async(req,res)=>{
+    try {
+        const Users= require('./models/user.model.js');
+        const allUser=await Users.find();
+        Promise.all(allUser.map(async(user)=>{
+            user.profilePic="https://www.w3schools.com/howto/img_avatar.png";
+            await user.save();
+        }))
+
+        return res.status(200).json({message:"Profile Pic Updated"});
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({message:"Internal Server Error"});
+    }
+})
+
+
+
+server.listen(PORT,()=>{
     connectToMongoDB();
     console.log(`Server is running on port ${PORT}`);
 });

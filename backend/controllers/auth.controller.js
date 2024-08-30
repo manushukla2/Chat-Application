@@ -31,10 +31,10 @@ export const signup =async(req,res)=>{
             userName,
             password:hashedPassword,
             gender,
-            ProfilePic: gender ==="male"? boyProfilePic:girlProfilePic
+            profilePic: gender == "male"? boyProfilePic:girlProfilePic
 
         })
-
+        console.log(newUser)
         if(newUser){
             //Generate JWT token
             await generateTokenAndSetCookie(newUser._id,res);
@@ -65,9 +65,6 @@ export const login =async(req,res)=>{
         const {userName,password}=req.body;
         const user=await User.findOne({userName});
         const isPasswordCorrect=await bcrypt.compare(password,user.password||"");
-        console.log(req.body);
-        console.log(user)
-        console.log(isPasswordCorrect);
         if(!user || !isPasswordCorrect){
             return res.status(400).json({error:"Invalid Credentials"});
         }
