@@ -80,7 +80,7 @@ Below are some screenshots of the application in action:
 ![Screenshot 2024-08-30 231913](https://github.com/user-attachments/assets/2145acfa-4bdf-45a4-a526-74bc7ddfa2ac)
 
 
-###Bi-Directional Chat Window
+### Bi-Directional Chat Window
 
 ![Screenshot 2024-08-30 233741](https://github.com/user-attachments/assets/7b9591c4-871e-481d-a78e-54e7784f6217)
 
