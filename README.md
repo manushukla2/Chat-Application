@@ -9,7 +9,7 @@ This is a React-based messaging application that provides users with a seamless 
 ## Live Demo
 
 You can view the live demo of this project 
-([https://chat-application-aa8d.onrender.com]). 
+(https://chat-application-aa8d.onrender.com). 
 
 Feel free to explore the app and see its features in action!
 
