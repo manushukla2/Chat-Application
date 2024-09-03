@@ -119,7 +119,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 - **React** and **React Icons** for providing powerful tools for UI development.
 - **Zustand** and **React Context** for state management solutions.
 - **Tailwind CSS** for a fast and flexible way to style the application.
-- Socket.IO** is used to enable real-time communication features.
+- **Socket.IO** is used to enable real-time communication features.
 
 ---
 
