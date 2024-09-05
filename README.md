@@ -6,6 +6,13 @@
 
 This is a React-based messaging application that provides users with a seamless experience for managing and interacting with their conversations. The application leverages Zustand for state management, React Context for authentication, and integrates several UI components for a smooth chat experience.
 
+## Live Demo
+
+You can view the live demo of this project 
+https://chat-application-aa8d.onrender.com 
+
+Feel free to explore the app and see its features in action!
+
 ## Features
 
 - **User Authentication**: Users can log in and authenticate using their credentials.
@@ -112,7 +119,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 - **React** and **React Icons** for providing powerful tools for UI development.
 - **Zustand** and **React Context** for state management solutions.
 - **Tailwind CSS** for a fast and flexible way to style the application.
-- Socket.IO** is used to enable real-time communication features.
+- **Socket.IO** is used to enable real-time communication features.
 
 ---
 
